@@ -12,7 +12,7 @@
 * C++ : `g++ -I$EIGEN -O2`
 * C++(BLAS) : `g++ -I$EIGEN -I$OPENBLAS -lopenblas -O2`
 * Julia : `@benchmark`
-* Nim : `nimble build -d:release -d:danger -d:openblas -d:blas=cblas`
+* Nim : `nimble build -d:release -d:danger -d:blas=openblas`
 
 ## Specific version
 

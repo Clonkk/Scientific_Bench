@@ -8,10 +8,9 @@ let row = parseInt(cmd[0])
 let col = parseInt(cmd[1])
 
 proc mm: float64 =
-  let m = newSeqWith(row*col, rand(1.0)).toTensor.reshape(row, col)
-  let n = newSeqWith(row*col, rand(1.0)).toTensor.reshape(row, col)
-  let res = m * n
-  return res[int(row/2), int(col/2)]
+  let m = randomTensor([row, col], max = 1.0)
+  let n = randomTensor([row, col], max = 1.0)
+  result = (m * n)[row div 2, col div 2]
 
 
 when isMainModule:
